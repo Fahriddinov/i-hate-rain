@@ -81,6 +81,6 @@
         font-size: 14px;
         padding: 10px;
     }
-    #playBtn { top: 300px; }
-    #togglePanel { top: 350px; }
+    #playBtn { top: 52%; }
+    #togglePanel { top: 60%; }
 }
