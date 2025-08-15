@@ -44,7 +44,6 @@
   .flash{ position:fixed; inset:0; pointer-events:none; background: rgba(255,255,255,0); mix-blend-mode:screen; transition: background 200ms ease; z-index:2; }
 
 
-
   /* Стандартный вид для ПК */
 #playBtn, #togglePanel {
     background: var(--panel);
@@ -82,6 +81,6 @@
         font-size: 14px;
         padding: 10px;
     }
-    #playBtn { top: 16px; }
-    #togglePanel { top: 60px; }
+    #playBtn { top: 300px; }
+    #togglePanel { top: 350px; }
 }
