@@ -169,8 +169,16 @@
   
 
   const audio = document.getElementById('bgMusic');
-  document.getElementById('playBtn').addEventListener('click', () => {
-    audio.play();
+  let playBtn = document.getElementById('playBtn');
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = 'Выключить звук';
+    } else {
+      audio.pause();
+      playBtn.textContent = 'Включить звук';
+    }
   });
 
   const panel = document.querySelector('.panel');
