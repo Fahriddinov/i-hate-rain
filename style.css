@@ -43,43 +43,45 @@
   /* Lightning flash overlay */
   .flash{ position:fixed; inset:0; pointer-events:none; background: rgba(255,255,255,0); mix-blend-mode:screen; transition: background 200ms ease; z-index:2; }
 
-  #playBtn{
-    position: fixed; left: 400px; top: 16px; z-index: 10;
-    background: var(--panel);
-    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-    border: 1px solid var(--panel-border);
-    border-radius: 16px; padding: 14px 14px 10px;
-    width: min(360px, calc(100vw - 32px));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  }
 
-  #togglePanel {
-    position: fixed; left: 400px; top: 80px; z-index: 10;
+
+  /* Стандартный вид для ПК */
+#playBtn, #togglePanel {
     background: var(--panel);
-    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--panel-border);
-    border-radius: 16px; padding: 14px 14px 10px;
+    border-radius: 16px;
+    padding: 14px 14px 10px;
     width: min(360px, calc(100vw - 32px));
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     color: var(--text);
     cursor: pointer;
 }
+#playBtn {
+    position: fixed;
+    left: 400px;
+    top: 16px;
+    z-index: 10;
+}
+#togglePanel {
+    position: fixed;
+    left: 400px;
+    top: 80px;
+    z-index: 10;
+}
 
 /* 📱 Адаптив для телефонов */
 @media (max-width: 768px) {
-    .panel {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        font-size: 14px;
-    }
     #playBtn, #togglePanel {
         position: fixed;
-        width: auto;
         left: 50%;
         transform: translateX(-50%);
-        padding: 10px;
+        width: auto;
+        max-width: 90%;
         font-size: 14px;
+        padding: 10px;
     }
-    #togglePanel { top: 70px; }
+    #playBtn { top: 16px; }
+    #togglePanel { top: 60px; }
 }
