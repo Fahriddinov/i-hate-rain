@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84890740c0730ef565400b85ec" alt="" style="width: 100%; height: 100%; opacity: 20%;">
+    <button id="playBtn">Включить звук</button>
+    <audio id="bgMusic">
+        <source src="audio/19-never-meant-to-belong.mp3" type="audio/mpeg">
+      </audio>
+
+      
+      
+    <canvas id="rain" width="1870" height="77" style="width: 1496px; height: 62px;"></canvas>
+    <div class="vignette"></div>
+    <div class="flash" id="flash"></div>
+    <div class="panel" role="group" aria-label="Rain controls">
+        <h1>
+          <span class="badge">🌧️ Rain</span>
+          <span style="opacity:.85">Interactive Controls</span>
+        </h1>
+    
+        <div class="row">
+          <label for="density">Zichlik (tomchi soni)</label>
+          <input id="density" type="range" min="100" max="2500" value="900" step="50">
+        </div>
+        <div class="row">
+          <label for="speed">Tezlik</label>
+          <input id="speed" type="range" min="0.4" max="2.2" value="1.0" step="0.1">
+        </div>
+        <div class="row">
+          <label for="wind">Shamol (°)</label>
+          <input id="wind" type="range" min="-30" max="30" value="-12" step="1">
+        </div>
+        <div class="row">
+          <label for="thickness">Tomchi qalinligi</label>
+          <input id="thickness" type="range" min="0.6" max="2.8" value="1.2" step="0.1">
+        </div>
+        <div class="row">
+          <label for="color">Rang</label>
+          <input id="color" type="color" value="#94d2ff">
+        </div>
+        <div class="row">
+          <label for="splash">Suv sachrashi</label>
+          <input id="splash" type="checkbox" checked="">
+        </div>
+        <div class="row">
+          <label for="lightning">Chaqqmoq</label>
+          <input id="lightning" type="checkbox">
+        </div>
+        <div class="hint">Qisqa tugmalar: <kbd>Space</kbd> — pauza, <kbd>L</kbd> — chaqqmoq, <kbd>R</kbd> — reset.</div>
+      </div>
+      <script src="main.js"></script>
+</body>
+</html>
