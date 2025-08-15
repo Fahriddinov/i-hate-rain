@@ -52,3 +52,34 @@
     width: min(360px, calc(100vw - 32px));
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
   }
+
+  #togglePanel {
+    position: fixed; left: 400px; top: 80px; z-index: 10;
+    background: var(--panel);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px; padding: 14px 14px 10px;
+    width: min(360px, calc(100vw - 32px));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* 📱 Адаптив для телефонов */
+@media (max-width: 768px) {
+    .panel {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        font-size: 14px;
+    }
+    #playBtn, #togglePanel {
+        position: fixed;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        font-size: 14px;
+    }
+    #togglePanel { top: 70px; }
+}

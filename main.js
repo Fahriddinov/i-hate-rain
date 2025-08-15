@@ -172,3 +172,16 @@
   document.getElementById('playBtn').addEventListener('click', () => {
     audio.play();
   });
+
+  const panel = document.querySelector('.panel');
+const toggleBtn = document.getElementById('togglePanel');
+
+toggleBtn.addEventListener('click', () => {
+    if (panel.style.display === 'none') {
+        panel.style.display = 'block';
+        toggleBtn.textContent = 'Скрыть панель';
+    } else {
+        panel.style.display = 'none';
+        toggleBtn.textContent = 'Показать панель';
+    }
+});
